@@ -1,0 +1,115 @@
+@import "vars";
+
+.feedback__form {
+    position: absolute;
+    top: 31%;
+    left: 51%;
+    width: 600px;
+    padding-top: 58px;
+
+    background-color: $white-color;
+    box-shadow: 0px 12px 26px rgba(0, 0, 0, 0.06);
+}
+
+.form__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1em;
+}
+
+.form__header {
+    display: block;
+    width: 77%;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 122.49%;
+    letter-spacing: 0.03em;
+    color: $super-black-color;
+}
+
+.form__description {
+    display: block;
+    width: 64%;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160.99%;
+    text-align: center;
+    color: $black-color;
+}
+
+.input__phone__wrapper {
+    width: 64%;
+    position: relative;
+}
+
+.input__phone {
+    width: 100%;
+
+    border: none;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $semi-color;
+}
+
+.input__phone__wrapper::after {
+    content: "";
+    background-color: $yellow-color;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.input__apply__text {
+    display: block;
+    width: 64%;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 160.99%;
+    color: $input-apply-text-color;
+}
+
+.input__phone:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.feedback__submit {
+    width: 240px;
+    height: 45px;
+    margin-top: 25px;
+
+    background-color: $yellow-color;
+    border: none;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 160.99%;
+    letter-spacing: 0.05em;
+    color: $black-color;
+}
+
+.feedback__triangle {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+}

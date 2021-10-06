@@ -1,0 +1,95 @@
+@import "vars";
+
+.header {
+    z-index: 10;
+    height: 85px;
+}
+
+.logo {
+    display: block;
+    cursor: pointer;
+
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 147.3%;
+
+    letter-spacing: 0.115em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo__1 {
+    color: $yellow-color;
+}
+
+.logo__2 {
+    color: $black-color;
+}
+
+.header__inner {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 22%;
+}
+
+.header__burger {
+    display: none;
+}
+
+.nav {
+    width: 450px;
+    display: inline-flex;
+    justify-content: space-between;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 147.3%;
+    letter-spacing: 0.115em;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: middle;
+   
+    position: relative;
+
+    color: $black-color;
+    text-decoration: none;
+}
+
+.nav__link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+
+    background-color: $yellow-color;
+
+    position: absolute;
+    top: 105%;
+    left: 0;
+    z-index: 10;
+
+    -webkit-transition: width .2s linear;
+    -moz--transition: width .2s linear;
+    transition: width .2s linear;
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+.link__toFeedback__header {
+    display: none;
+}
+
+
+/************************************************************/
+/************************** 1440 ****************************/
+/************************************************************/
+@media (max-width: 1440px) {
+    .header__inner { justify-content: space-between; gap: 0; }
+    .link__toFeedback__header { display: inline; }
+}

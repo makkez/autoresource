@@ -1,0 +1,105 @@
+@import "vars";
+@import "vendor/reset";
+@import "font";
+
+body {
+    font-family: 'Gilroy';
+    font-style: normal;
+
+    background-color: $background-color;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: $max-width-content;
+    margin: 0 auto;
+}
+
+.link__toFeedback {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 147.3%;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $dark-blue-color;
+}
+
+.block__toFeedback {
+    display: inline-grid;
+    width: 285px;
+    height: 47px;
+
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: $yellow-color;
+}
+
+@import "header";
+@import "intro";
+@import "partners";
+
+.section__name {
+    margin-bottom: 1em;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 147.3%;
+
+    text-transform: uppercase;
+
+    color: $section-name-color;
+}
+
+.section__name::after {
+    content: "";
+    display: block;
+    margin-top: 1em;
+    width: 105px;
+    height: 4px;
+
+    background-color: $yellow-color;
+}
+
+.section__description {
+    display: block;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160.99%;
+
+    color: $section-description-color;
+}
+
+@import "services";
+@import "about";
+
+@import "footer";
+@import "form";
+
+@import "galery";
+@import "final";
+
+
+/************************************************************/
+/************************** 1250 ****************************/
+/************************************************************/
+@media (max-width: 1250px) {
+    .container { padding: 0 20px; }
+    .block__toFeedback { width: 240px; }
+}
+
+/************************************************************/
+/************************** 1024 ****************************/
+/************************************************************/
+@media (max-width: 1024px) {
+    .block__toFeedback { width: 220px; height: 40px; }
+}

@@ -1,0 +1,24 @@
+.partners__inner {
+    padding: 5% 0;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.brands__item {
+    display: inline-flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.brands__item img {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}

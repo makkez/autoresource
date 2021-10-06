@@ -1,0 +1,66 @@
+@import "vars";
+
+.services {
+    margin-top: 3%;
+}
+
+.services__description {
+    width: 80%;
+}
+
+.services__catalog {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1.8em;
+    flex-wrap: wrap;
+
+    margin-top: 5%;
+}
+
+.catalog__item {
+    position: relative;
+}
+
+.catalog__item__header {
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 60%;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 120%;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: $white-color;
+}
+
+.catalog__item__list {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: .5em;
+
+    list-style-type: none;
+    padding-inline-start: 0;
+
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $catalog-item-list-color;
+}

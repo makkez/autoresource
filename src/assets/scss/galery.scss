@@ -1,0 +1,17 @@
+.galery {
+    margin-top: 200px;
+    margin-bottom: 124px;
+}
+
+.galery__inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.galery__item {
+    display: block;
+    width: 390px;
+    height: 274px;
+}

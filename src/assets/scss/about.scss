@@ -1,0 +1,62 @@
+@import "vars";
+
+.about {
+    margin-top: 10%;
+}
+
+.about__description {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about__description__wrapper {
+    width: 46%;
+}
+
+.about__description__text {
+    display: block;
+    margin-right: 10%;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160.99%;
+    color: $section-description-color;
+}
+
+.about__description__img {
+    display: block;
+}
+
+.about__description__thesises__container {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.about__decription__thesis {
+    width: 30%;
+}
+
+.about__description__thesis__text {
+    display: block;
+
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 131.49%;
+    letter-spacing: 0.01em;
+    color: $about-description-thesis-color;
+}
+
+.about__description__thesis__main {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 160.99%;
+    color: $about-description-thesis-main-color;
+}
