@@ -46,7 +46,7 @@ body {
 @import "partners";
 
 .section__name {
-    margin-bottom: 1em;
+    margin-bottom: 23px;
 
     font-family: Gotham Pro;
     font-style: normal;
@@ -62,7 +62,7 @@ body {
 .section__name::after {
     content: "";
     display: block;
-    margin-top: 1em;
+    margin-top: 18px;
     width: 105px;
     height: 4px;
 

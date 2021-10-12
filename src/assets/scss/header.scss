@@ -92,6 +92,7 @@
 /************************** 767 *****************************/
 /************************************************************/
 @media (max-width: 767px) {
+    .header { height: 60px; }
     .link__toFeedback__header { display: none; }
 
     .header__burger {
