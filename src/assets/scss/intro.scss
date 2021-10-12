@@ -3,7 +3,7 @@
 .intro {
     position: relative;
     width: 100%;
-    height: 47vw;
+    height: 100vh;
 
     background: url("../images/intro_bgr.jpg") center no-repeat;
     -webkit-background-size: cover;
@@ -17,7 +17,7 @@
 
 .intro__content {
     width: 55%;
-    margin: auto 0;
+    margin: auto -41px;
     color: $white-color;
     padding-left: 41px;
 }
@@ -50,24 +50,8 @@
     line-height: 160.99%;
 }
 
-.link__toFeedback1 {
-    display: block;
-    width: 42%;
-    margin-top: $intro-content-margin-top;
-    padding: 1em 0;
-
-    background-color: $yellow-color;
-
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 147.3%;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: $dark-blue-color;
-    align-content: center;
-    text-align: center;
-
-    text-decoration: none;
+.block__toFeedback__intro {
+    margin-top: 9%;
 }
 
 .inserts {
@@ -82,4 +66,59 @@
 .intro__i2 {
     top: 36%;
     left: 53%;
+}
+
+/************************************************************/
+/************************** 1439 ****************************/
+/************************************************************/
+@media (max-width: 1439px) {
+    .intro__content { margin: auto 0; }
+    .info__main strong { font-size: 30px; }
+    .info__main span { font-size: 27px; }
+    .intro__i1 { top: 4vh; }
+    .intro__i2 { top: 30vh; }
+}
+
+/************************************************************/
+/************************** 1023 ****************************/
+/************************************************************/
+@media (max-width: 1023px) {
+    .intro__i1 { display: none; }
+    .intro__i2 { display: none; }
+    .intro__content { width: 100%; padding-right: 41px; }
+    .info__main strong { font-size: 40px; }
+    .info__main span { font-size: 36px; }
+}
+
+/************************************************************/
+/************************** 767 *****************************/
+/************************************************************/
+@media (max-width: 767px) {
+    .intro__content { padding: 0; }
+    .info__main { border: none; padding: 0; margin: 0; }
+
+    .info__main::after {
+        content: "";
+        display: block;
+        width: 158px;
+        height: 3px;
+        position: relative;
+        top: 15px;
+        background-color: $yellow-color;
+    }
+
+    .info__main strong { font-size: 24px; }
+    .info__main span { font-size: 24px; }
+    .info__description { font-size: 14px; }
+    .block__toFeedback__intro { 
+        width: 285px !important; 
+        font-size: 14px;
+    }
+}
+
+/************************************************************/
+/************************** 424 *****************************/
+/************************************************************/
+@media (max-width: 424px) {
+    .block__toFeedback__intro { width: 100% !important; }
 }
