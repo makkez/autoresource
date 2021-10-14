@@ -26,6 +26,7 @@ const distPath = 'dist/';
 const path = {
     build: {
         html:   distPath,
+        php:    distPath + "php/",
         js:     distPath + "assets/js/",
         css:    distPath + "assets/css/",
         images: distPath + "assets/images/",
@@ -33,13 +34,15 @@ const path = {
     },
     src: {
         html:   srcPath + "*.html",
-        js:     srcPath + "assets/js/*.js",
-        css:    srcPath + "assets/scss/*.scss",
+        php:    srcPath + "php/**/*.php",
+        js:     srcPath + "assets/js/**/*.js",
+        css:    srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     watch: {
         html:   srcPath + "**/*.html",
+        php:    srcPath + "php/**/*.php",
         js:     srcPath + "assets/js/**/*.js",
         css:    srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
@@ -72,6 +75,14 @@ function html(cb) {
             data:       srcPath + 'data/'
         }))
         .pipe(dest(path.build.html))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+function php(cb) {
+    return src(path.src.php, {base: srcPath + "php/"})
+        .pipe(dest(path.build.php))
         .pipe(browserSync.reload({stream: true}));
 
     cb();
@@ -217,19 +228,21 @@ function clean(cb) {
 
 function watchFiles() {
     gulp.watch([path.watch.html], html);
+    gulp.watch([path.watch.php], php);
     gulp.watch([path.watch.css], cssWatch);
     gulp.watch([path.watch.js], jsWatch);
     gulp.watch([path.watch.images], images);
     gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, php, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
 
 /* Exports Tasks */
 exports.html = html;
+exports.php = php;
 exports.css = css;
 exports.js = js;
 exports.images = images;
