@@ -21,3 +21,21 @@
     line-height: 122.49%;
     color: $final-info-color;
 }
+
+/************************************************************/
+/************************** 1439 ****************************/
+/************************************************************/
+@media (max-width: 1439px) {
+    .final { margin-top: 200px; background-color: $final-info-background-color; }
+    #final-info { color: $final-info-color-alternate; }
+    .final__inner { justify-content: flex-start; }
+}
+
+/************************************************************/
+/************************** 767 *****************************/
+/************************************************************/
+@media (max-width: 767px) {
+    .final { height: 55px; margin-top: 55px;}
+    #final-info { font-size: 10px; }
+    .final__inner { justify-content: center; }
+}

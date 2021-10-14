@@ -2,9 +2,8 @@
 
 .feedback__form {
     position: absolute;
-    top: 31%;
-    left: 51%;
-    width: 600px;
+    top: 0;
+    left: calc(100% / 2);
     padding-top: 58px;
 
     background-color: $white-color;
@@ -22,6 +21,7 @@
 .form__header {
     display: block;
     width: 77%;
+    text-align: center;
 
     font-family: Gilroy;
     font-style: normal;
@@ -112,4 +112,49 @@
     position: absolute;
     top: calc(100% - 1px);
     left: 0;
+}
+
+/************************************************************/
+/************************** 1439 ****************************/
+/************************************************************/
+@media (max-width: 1439px) {
+    .form__header { width: 80%; font-size: 25px; }
+    .form__description { width: 73%; }
+    .input__phone__wrapper { width: 73%; }
+    .input__apply__text { width: 73%; }
+}
+
+/************************************************************/
+/************************** 1023 ****************************/
+/************************************************************/
+@media (max-width: 1023px) {
+    .feedback__form { padding-top: 40px; }
+    .form__header { width: 90%; font-size: 21px; }
+    .form__description { width: 80%; }
+    .input__phone__wrapper { width: 80%; }
+    .input__apply__text { width: 80%; }
+    .feedback__submit { width: 220px; margin-top: 20px; }
+}
+
+/************************************************************/
+/************************** 767 *****************************/
+/************************************************************/
+@media (max-width: 767px) {
+    .feedback__triangle { display: none; }
+    .feedback__form { 
+        width: 100%; 
+        position: relative; 
+        left: 0; 
+        padding-top: 40px;
+        padding-bottom: 70px;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.13);
+    }
+    .form__header { 
+        font-size: 24px;
+        line-height: 151%; 
+        color: $section-description-color;
+    }
+    .form__description { font-size: 12px; }
+    .input__apply__text { font-size: 9px; text-align: center; }
+    .feedback__submit { width: 240px; }
 }

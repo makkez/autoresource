@@ -1,5 +1,5 @@
 document.getElementById('header-burger').onclick = function () {
-    let hBurgerElem = document.getElementById('header__burger');
+    let hBurgerElem = document.getElementById('header-burger');
     if (hBurgerElem) { hBurgerElem.classList.toggle('active'); }
 
     let navElem = document.getElementById('nav');
